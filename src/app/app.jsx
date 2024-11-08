@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
-import styles from './app.module.scss';
+import { Route, Routes } from 'react-router-dom';
+import ListCertificates from '../features/certificate/components/certificate-list';
 
 const App = () => {
   const API_URL = '/service/api/api';
@@ -24,10 +25,14 @@ const App = () => {
     }
   };
   return (
-    <>
-      <div className={styles.app}></div>;
-      <button onClick={fetchCertificates}>fetch</button>
-    </>
+      <div className='app'>
+				<Routes>
+					<Route path="/" element={<ListCertificates/>}/>
+					<Route />
+					<Route/>
+					<Route path="*" element={}/>
+				</Routes>
+			</div>
   );
 };
 

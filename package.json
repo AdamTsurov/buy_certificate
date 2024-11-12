@@ -17,7 +17,7 @@
     "redux-thunk": "^3.1.0"
   },
   "proxy": "https://sycret.ru",
-  "homepage": "https://AdamTsurov.github.io/buy_certificate",
+  "homepage": "https://adamtsurov.github.io/buy_certificate",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

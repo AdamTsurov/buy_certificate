@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../../../../../components/ui/button/button';
 import { calculateDiscount } from '../../../../../utils/calculateDiscount';
+import { useNavigate } from 'react-router-dom';
 
 const CertificateItem = ({
   index,
@@ -9,12 +10,13 @@ const CertificateItem = ({
   price,
   discount,
   image,
+  ID,
 }) => {
-	const [buyComplete, setBuyComplete] = useState();
+  const navigate = useNavigate();
 
   const handleBuyCertificate = () => {
-		
-	};
+    navigate(`/contacts/${ID}`);
+  };
 
   return (
     <div className="certificate-item">

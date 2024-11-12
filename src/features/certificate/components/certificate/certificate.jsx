@@ -1,22 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Input from '../../../../components/ui/input/input';
-import { fetchCertificates } from '../../api/get-certificates';
+import fetchCertificates from '../../api/get-certificates';
 import ListCertificates from './certificate-list/certificate-list';
+import useCertificates from '../../../../hooks/useCertificates';
 
 const Certificate = () => {
-  const [certificates, setCertificates] = useState([]);
-  useEffect(() => {
-    fetchCertificates().then(result => {
-      if (result) {
-        console.log(result);
-        setCertificates([...certificates, ...result]);
-      }
-    });
-  }, []);
+  const { certificates } = useCertificates();
 
   return (
     <div className="certificate">
-      <ListCertificates certificates={certificates}/>
+      <ListCertificates certificates={certificates} />
     </div>
   );
 };

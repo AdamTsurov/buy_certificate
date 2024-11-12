@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = '011ba11bdcad4fa396660c2ec447ef14'; // Ваш API-ключ
-const API_URL = 'https://sycret.ru/service/api/api'; // URL для вызова API
+const API_KEY = '011ba11bdcad4fa396660c2ec447ef14';
+const API_URL = '/service/api/api';
 
 const buyCertificates = async (certificate, clientData) => {
   try {
@@ -23,10 +23,8 @@ const buyCertificates = async (certificate, clientData) => {
       PName: '',
       PPhone: '',
     });
-    console.log('OSSale Response:', response.data);
     return response.data;
   } catch (error) {
-    console.error('Error making OSSale request:', error);
     throw error;
   }
 };

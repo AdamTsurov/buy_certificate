@@ -4,7 +4,7 @@ import CertificateItem from '../certificate-item/certificate-item';
 const ListCertificates = ({ certificates }) => {
   return (
     <div className="certificates-list">
-      {certificates.map((certificate, index) => {
+      {certificates?.map((certificate, index) => {
         return (
           <CertificateItem
             key={certificate.ID}
@@ -14,6 +14,7 @@ const ListCertificates = ({ certificates }) => {
             price={certificate.PRICE}
             discount={certificate.DISCOUNT}
             image={certificate.IMAGEURL}
+            ID={certificate.ID}
           />
         );
       })}

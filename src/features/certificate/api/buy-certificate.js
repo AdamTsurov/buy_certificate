@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_KEY = '011ba11bdcad4fa396660c2ec447ef14';
-const API_URL = '/service/api/api';
+const API_URL = 'https://sycret.ru/service/api/api';
 
 const buyCertificates = async (certificate, clientData) => {
   try {
